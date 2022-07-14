@@ -24,4 +24,5 @@ What are the 5 Cadence Programming Language Pillars?
 5. Resource Oriented Programming
 
 In your opinion, even without knowing anything about the Blockchain or coding, why could the 5 Pillars be useful (you don't have to answer this for #5)?
+
 The 5 pillars is what makes Cadence more trustworthy and in turn makes the Flow blockchain more trustworthy and reliable. If I know that the smart contract that I am deploying is secure, clearly does what I want, easily explainable, easier to write and maintain then I will feel more assured that my Dapps will work as they are supposed to work.
