@@ -54,8 +54,9 @@ A function named updateMyNumber that takes in a new number named newNumber as a 
 Add a script that reads myNumber from the contract
 
 Add a transaction that takes in a parameter named myNewNumber and passes it into the updateMyNumber function. Verify that your number changed by running the script again.
+![Screen Shot 2022-07-16 at 2 51 32 PM](https://user-images.githubusercontent.com/1117327/179372949-f62f5de0-4e3c-4f86-86af-994ea6059434.png)
+![Screen Shot 2022-07-16 at 2 51 22 PM](https://user-images.githubusercontent.com/1117327/179372951-bd14fb4b-2cfe-4ef3-ad8f-dee1bb2ba102.png)
+![Screen Shot 2022-07-16 at 2 51 16 PM](https://user-images.githubusercontent.com/1117327/179372954-6f55d1e2-aca2-4d02-8134-94d0ebd312d1.png)
 
-![Screen Shot 2022-07-16 at 11 22 58 AM](https://user-images.githubusercontent.com/1117327/179367511-99d57274-820c-456c-892d-70eefdb0f312.png)
-![Screen Shot 2022-07-16 at 11 23 08 AM](https://user-images.githubusercontent.com/1117327/179367529-840c0296-6250-4a3f-bf74-2e9d89b64675.png)
-![Screen Shot 2022-07-16 at 11 22 50 AM](https://user-images.githubusercontent.com/1117327/179367547-ce7b6c14-9a1d-421a-93de-b01d433b7d52.png)
+
 
