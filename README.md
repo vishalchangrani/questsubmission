@@ -33,12 +33,15 @@ The 5 pillars is what makes Cadence more trustworthy and in turn makes the Flow 
 
 ## Chapter 2 Day 2
 1. Explain why we wouldn't call changeGreeting in a script.
+
 A script is only meant to read data, not modify it. Hence, we wouldn't call `changeGreeting` in a script.
 
 What does the AuthAccount mean in the prepare phase of the transaction?
+
 `Authaccount` is the one who pays for the transaction. In the prepare phase, information from the `AuthAccount` can be accessed.
 
 What is the difference between the prepare phase and the execute phase in the transaction?
+
 Prepare phase is where the transaction can access data of the authorizer account. Execute phase is where the data in the account should be modified.
 
 This is the hardest quest so far, so if it takes you some time, do not worry! I can help you in the Discord if you have questions.
