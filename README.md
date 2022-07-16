@@ -59,4 +59,21 @@ Add a transaction that takes in a parameter named myNewNumber and passes it into
 ![Screen Shot 2022-07-16 at 2 51 16 PM](https://user-images.githubusercontent.com/1117327/179372954-6f55d1e2-aca2-4d02-8134-94d0ebd312d1.png)
 
 
+## Chapter 2 Day 3
+![Screen Shot 2022-07-16 at 4 04 30 PM](https://user-images.githubusercontent.com/1117327/179374524-455f4d7d-b0c6-4ab9-a68b-1422d6e91228.png)
+
+Quest 4
+Using this picture below, explain...
+What the error message means
+
+The error indicates that an optional is being returned while the method signature defines a non-optional String type.
+
+Why we're getting this error
+
+A value from a dictionary is returned as optional and hence the return type for the function needs to be made optional.
+
+How to fix it
+
+Changing the function signature to
+`pub fun main(): String? {` should fix the error
 
