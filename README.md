@@ -29,6 +29,7 @@ The 5 pillars is what makes Cadence more trustworthy and in turn makes the Flow 
 
 
 ## Chapter 2 Day 1
+![Screen Shot 2022-07-16 at 2 45 39 PM](https://user-images.githubusercontent.com/1117327/179372832-e25c5e2d-fceb-4ab7-857e-56df3f3a4ab8.png)
 ![Screen Shot 2022-07-16 at 10 42 44 AM](https://user-images.githubusercontent.com/1117327/179366253-93504d64-0ef8-417a-af82-bff7544cae79.png)
 
 ## Chapter 2 Day 2
