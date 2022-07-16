@@ -31,3 +31,22 @@ The 5 pillars is what makes Cadence more trustworthy and in turn makes the Flow 
 ## Chapter 2 Day 1
 ![Screen Shot 2022-07-16 at 10 42 44 AM](https://user-images.githubusercontent.com/1117327/179366253-93504d64-0ef8-417a-af82-bff7544cae79.png)
 
+## Chapter 2 Day 2
+1. Explain why we wouldn't call changeGreeting in a script.
+A script is only meant to read data, not modify it. Hence, we wouldn't call `changeGreeting` in a script.
+
+What does the AuthAccount mean in the prepare phase of the transaction?
+`Authaccount` is the one who pays for the transaction. In the prepare phase, information from the `AuthAccount` can be accessed.
+
+What is the difference between the prepare phase and the execute phase in the transaction?
+Prepare phase is where the transaction can access data of the authorizer account. Execute phase is where the data in the account should be modified.
+
+This is the hardest quest so far, so if it takes you some time, do not worry! I can help you in the Discord if you have questions.
+
+Add two new things inside your contract:
+
+A variable named myNumber that has type Int (set it to 0 when the contract is deployed)
+A function named updateMyNumber that takes in a new number named newNumber as a parameter that has type Int and updates myNumber to be newNumber
+Add a script that reads myNumber from the contract
+
+Add a transaction that takes in a parameter named myNewNumber and passes it into the updateMyNumber function. Verify that your number changed by running the script again.
