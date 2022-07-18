@@ -77,3 +77,8 @@ How to fix it
 Changing the function signature to
 `pub fun main(): String? {` should fix the error
 
+## Chapter 2 Day 4
+
+![Screen Shot 2022-07-17 at 10 03 59 PM](https://user-images.githubusercontent.com/1117327/179448298-14be193f-edb1-4e92-8242-6266acfe7048.png)
+![Screen Shot 2022-07-17 at 10 03 21 PM](https://user-images.githubusercontent.com/1117327/179448299-81fe9b33-d046-45e7-bdbf-7d04d3f78e88.png)
+![Screen Shot 2022-07-17 at 10 03 12 PM](https://user-images.githubusercontent.com/1117327/179448301-5196caee-a67c-45ce-b89c-21108d8068cd.png)
