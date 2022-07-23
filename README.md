@@ -82,3 +82,53 @@ Changing the function signature to
 ![Screen Shot 2022-07-17 at 10 03 59 PM](https://user-images.githubusercontent.com/1117327/179448298-14be193f-edb1-4e92-8242-6266acfe7048.png)
 ![Screen Shot 2022-07-17 at 10 03 21 PM](https://user-images.githubusercontent.com/1117327/179448299-81fe9b33-d046-45e7-bdbf-7d04d3f78e88.png)
 ![Screen Shot 2022-07-17 at 10 03 12 PM](https://user-images.githubusercontent.com/1117327/179448301-5196caee-a67c-45ce-b89c-21108d8068cd.png)
+
+## Chapter 3 Day 1
+
+1. In words, list 3 reasons why structs are different from resources.
+Structs can be copied, resource can't.
+Structs can be overwritte, resource can't.
+Structs can be created anywhere but resources can only be created inside a contract.
+
+
+2. Describe a situation where a resource might be better to use than a struct.
+
+A NFT would be better represented as a resource than a struct.
+
+3. What is the keyword to make a new resource?
+
+`create`
+
+4. Can a resource be created in a script or transaction (assuming there isn't a public function to create one)?
+
+No, it can only be created inside a contract.
+
+5. What is the type of the resource below?
+
+```cadence
+pub resource Jacob {
+
+}
+```
+
+The resource is of type Jacob.
+
+6. Let's play the "I Spy" game from when we were kids. I Spy 4 things wrong with this code. Please fix them.
+
+```cadence
+pub contract Test {
+
+    // Hint: There's nothing wrong here ;)
+    pub resource Jacob {
+        pub let rocks: Bool
+        init() {
+            self.rocks = true
+        }
+    }
+
+    pub fun createJacob(): @Jacob { // there is 1 here - Added @
+        let myJacob <- create Jacob() // there are 2 here - Replaced = with <- and added Create
+        return <- myJacob // there is 1 here - Fixed return value to <- myJacob
+    }
+}
+```
