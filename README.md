@@ -86,8 +86,11 @@ Changing the function signature to
 ## Chapter 3 Day 1
 
 1. In words, list 3 reasons why structs are different from resources.
+
 Structs can be copied, resource can't.
+
 Structs can be overwritte, resource can't.
+
 Structs can be created anywhere but resources can only be created inside a contract.
 
 
