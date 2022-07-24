@@ -164,11 +164,11 @@ pub contract ResourceCollectionExample {
         return <- removedNft
     }
 
-    pub fun addNFT(nft: @NFT) {
+    pub fun addNFTToArray(nft: @NFT) {
         self.arrayOfNFTs.append(<- nft)
     }
 
-    pub fun removeNFT(index: Int): @NFT {
+    pub fun removeNFTFromArray(index: Int): @NFT {
         return <- self.arrayOfNFTs.remove(at: index)
     }
 
