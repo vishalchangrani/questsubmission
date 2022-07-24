@@ -135,3 +135,48 @@ pub contract Test {
     }
 }
 ```
+
+
+## Chapter 3 Day 2
+
+```
+pub contract ResourceCollectionExample {
+
+    pub var dictionaryOfNFTs: @{String: NFT}
+    pub var arrayOfNFTs: @[NFT]
+
+
+    pub resource NFT {
+        pub let url: String
+        init() {
+            self.url = "http://someurl"
+        }
+    }
+
+    pub fun addNFTToDict(nft: @NFT) {
+        let key = nft.url
+        let oldGreeting <- self.dictionaryOfNFTs[key] <- nft
+        destroy oldGreeting
+    }
+
+    pub fun removeNFTFromDict(key: String): @NFT {
+        let removedNft <- self.dictionaryOfNFTs.remove(key: key) ?? panic("Could not find the NFT!")
+        return <- removedNft
+    }
+
+    pub fun addNFT(nft: @NFT) {
+        self.arrayOfNFTs.append(<- nft)
+    }
+
+    pub fun removeNFT(index: Int): @NFT {
+        return <- self.arrayOfNFTs.remove(at: index)
+    }
+
+
+    init() {
+        self.dictionaryOfNFTs <- {}
+        self.arrayOfNFTs <- []
+    }
+
+}
+```
