@@ -180,3 +180,54 @@ pub contract ResourceCollectionExample {
 
 }
 ```
+
+## Chapter 3 Day 3
+
+1. Define your own contract that stores a dictionary of resources. Add a function to get a reference to one of the resources in the dictionary.
+
+```
+pub contract ResourceCollectionExample {
+
+    pub var dictionaryOfNFTs: @{String: NFT}
+   
+
+    pub resource NFT {
+        pub let url: String
+        init(_url: String) {
+            self.url = _url
+        }
+    }
+
+    pub fun getNFTReference(key: String): &NFT? {
+        return &self.dictionaryOfNFTs[key] as &NFT?
+    }
+
+    init() {
+        let url: String =  "www.youtube.com"
+        self.dictionaryOfNFTs <- {
+        url: <- create NFT(_url: url)
+        }
+    }
+}
+```
+
+2. Create a script that reads information from that resource using the reference from the function you defined in part 1.
+
+```
+import ResourceCollectionExample from 0x01
+
+pub fun main(): String {
+  let ref = ResourceCollectionExample.getNFTReference(key: "www.youtube.cm")
+  if (ref==nil) {
+    log("NFT not found")
+    return ""
+  } else {
+    log("NFT found")
+    var nonNilRef = ref!
+    return nonNilRef.url
+  }
+}
+```
+
+3. Explain, in your own words, why references can be useful in Cadence.
+Reference help avoid moving resource and _refer_ to resource without needing to move it.
