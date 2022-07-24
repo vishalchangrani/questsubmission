@@ -230,4 +230,5 @@ pub fun main(): String {
 ```
 
 3. Explain, in your own words, why references can be useful in Cadence.
+
 Reference help avoid moving resource and _refer_ to resource without needing to move it.
