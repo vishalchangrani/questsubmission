@@ -310,3 +310,76 @@ pub contract Stuff {
     }
 }
 ```
+
+
+## Chapter 3 Day 5
+
+:white_check_mark: - Access allowed or function call allowed
+
+:x: - Access not allowed
+
+
+**Area 1**
+
+| Variable|Read|Write|
+|---------|----|-----|
+|`a`      | :white_check_mark:  | :white_check_mark:  |
+|`b`      | :white_check_mark:  | :white_check_mark:  |
+|`c`      | :white_check_mark:  | :white_check_mark:  |
+|`d`      | :white_check_mark:  | :white_check_mark:  |
+
+
+| Funcation|Can call?|
+|---------------|---------------------|
+|`publicFunc`   | :white_check_mark:  | 
+|`contractFunc` | :white_check_mark:  |
+|`privateFunc`  | :white_check_mark:  |
+
+**Area 2**
+
+| Variable|Read|Write|
+|---------|----|-----|
+|`a`      | :white_check_mark:  | :white_check_mark:  |
+|`b`      | :white_check_mark:  | :white_check_mark:  |
+|`c`      | :white_check_mark:  | :white_check_mark:  |
+|`d`      | :white_check_mark:  | :white_check_mark:  |
+
+
+| Funcation|Can call?|
+|---------------|---------------------|
+|`publicFunc`   | :white_check_mark:  | 
+|`contractFunc` | :white_check_mark:  |
+|`privateFunc`  | :white_check_mark:  |
+
+**Area 3**
+
+| Variable|Read|Write|
+|---------|----|-----|
+|`a`      | :white_check_mark:  | :white_check_mark:  |
+|`b`      | :white_check_mark:  | :white_check_mark:  |
+|`c`      | :white_check_mark:  | :white_check_mark:  |
+|`d`      | :white_check_mark:  | :white_check_mark:  |
+
+
+| Funcation|Can call?|
+|---------------|---------------------|
+|`publicFunc`   | :white_check_mark:  | 
+|`contractFunc` | :white_check_mark:  |
+|`privateFunc`  | :white_check_mark:  |
+
+
+**Area 4**
+
+| Variable|Read|Write|
+|---------|----|-----|
+|`a`      | :white_check_mark:  | :white_check_mark:  |
+|`b`      | :white_check_mark:  | :white_check_mark:  |
+|`c`      | :white_check_mark:  | :white_check_mark:  |
+|`d`      | :white_check_mark:  | :white_check_mark:  |
+
+
+| Funcation|Can call?|
+|---------------|---------------------|
+|`publicFunc`   | :white_check_mark:  | 
+|`contractFunc` | :white_check_mark:  |
+|`privateFunc`  | :white_check_mark:  |
