@@ -232,3 +232,11 @@ pub fun main(): String {
 3. Explain, in your own words, why references can be useful in Cadence.
 
 Reference help avoid moving resource and _refer_ to resource without needing to move it.
+
+## Chapter 3 Day 4
+
+1. Explain, in your own words, the 2 things resource interfaces can be used for (we went over both in today's content)
+
+a. Interface can be used to define the contract that a resource implements.
+b. It allows for data encapsulation where a resource could _hide_ its internal methods and data from the outside world.
+
