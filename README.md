@@ -241,3 +241,36 @@ Reference help avoid moving resource and _refer_ to resource without needing to 
  
  b. It allows for data encapsulation where a resource could _hide_ its internal methods and data from the outside world.
 
+
+2. 
+```
+pub contract Geometry {
+
+  pub resource interface IShape {
+     pub fun area(): UInt64
+  }
+
+  pub resource Square: IShape {
+    pub var side : UInt64
+    pub fun area(): UInt64 {
+      return self.side*self.side
+    }
+    init() {
+        self.side = 10
+    }
+  }
+
+  pub fun getSideOfSquare() {
+    let sq: @Square <- create Square()
+    log(sq.side) // 10
+    destroy sq
+  }
+
+    pub fun getAreaOfSquare() {
+    let sq: @Square{IShape} <- create Square()
+    log(sq.area()) // 100
+    // log(sq.side) Exanple of not being able to access the content of a resource
+    destroy sq
+  }
+}
+```
