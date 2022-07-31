@@ -316,7 +316,7 @@ pub contract Stuff {
 
 :white_check_mark: - Access allowed or function call allowed
 
-:x: - Access not allowed
+:x: - Access not allowed or funcation call not allowed
 
 
 **Area 1**
@@ -340,32 +340,32 @@ pub contract Stuff {
 | Variable|Read|Write|
 |---------|----|-----|
 |`a`      | :white_check_mark:  | :white_check_mark:  |
-|`b`      | :white_check_mark:  | :white_check_mark:  |
-|`c`      | :white_check_mark:  | :white_check_mark:  |
-|`d`      | :white_check_mark:  | :white_check_mark:  |
+|`b`      | :white_check_mark:  | :x:  |
+|`c`      | :white_check_mark:  | :x:  |
+|`d`      | :x:  | :x:  |
 
 
 | Funcation|Can call?|
 |---------------|---------------------|
 |`publicFunc`   | :white_check_mark:  | 
 |`contractFunc` | :white_check_mark:  |
-|`privateFunc`  | :white_check_mark:  |
+|`privateFunc`  | :x:  |
 
 **Area 3**
 
 | Variable|Read|Write|
 |---------|----|-----|
 |`a`      | :white_check_mark:  | :white_check_mark:  |
-|`b`      | :white_check_mark:  | :white_check_mark:  |
-|`c`      | :white_check_mark:  | :white_check_mark:  |
-|`d`      | :white_check_mark:  | :white_check_mark:  |
+|`b`      | :white_check_mark:  | :x:  |
+|`c`      | :white_check_mark:  | :x:  |
+|`d`      | :x:  | :x:  |
 
 
 | Funcation|Can call?|
 |---------------|---------------------|
 |`publicFunc`   | :white_check_mark:  | 
 |`contractFunc` | :white_check_mark:  |
-|`privateFunc`  | :white_check_mark:  |
+|`privateFunc`  | :x:  |
 
 
 **Area 4**
@@ -373,13 +373,13 @@ pub contract Stuff {
 | Variable|Read|Write|
 |---------|----|-----|
 |`a`      | :white_check_mark:  | :white_check_mark:  |
-|`b`      | :white_check_mark:  | :white_check_mark:  |
-|`c`      | :white_check_mark:  | :white_check_mark:  |
-|`d`      | :white_check_mark:  | :white_check_mark:  |
+|`b`      | :white_check_mark:  | :x:  |
+|`c`      | :x:  | :x:  |
+|`d`      | :x:  | :x:  |
 
 
 | Funcation|Can call?|
 |---------------|---------------------|
 |`publicFunc`   | :white_check_mark:  | 
-|`contractFunc` | :white_check_mark:  |
-|`privateFunc`  | :white_check_mark:  |
+|`contractFunc` | :x:  |
+|`privateFunc`  | :x:  |
