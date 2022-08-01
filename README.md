@@ -372,7 +372,7 @@ pub contract Stuff {
 
 | Variable|Read|Write|
 |---------|----|-----|
-|`a`      | :white_check_mark:  | :white_check_mark:  |
+|`a`      | :white_check_mark:  | :x:  |
 |`b`      | :white_check_mark:  | :x:  |
 |`c`      | :x:  | :x:  |
 |`d`      | :x:  | :x:  |
