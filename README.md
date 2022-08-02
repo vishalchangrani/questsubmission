@@ -383,3 +383,42 @@ pub contract Stuff {
 |`publicFunc`   | :white_check_mark:  | 
 |`contractFunc` | :x:  |
 |`privateFunc`  | :x:  |
+
+
+## Chapter 4 Day 1
+
+1. Explain what lives inside of an account.
+
+Contract Code - All smart contracts for the account.
+Account Storage - All data of the account - NFT, resources etc.
+
+
+2. What is the difference between the /storage/, /public/, and /private/ paths?
+
+`/storage` can only be accessed by the account owner
+
+`/public` can be accessed by anyone
+
+`/private` can be accessed by the account owner and to other accounts which the owner gives access to.
+
+3. What does .save() do? What does .load() do? What does .borrow() do?
+
+`.save()` - Saves data to the account storage
+
+`.load()` - Loads data from the account storage by taking it out from the storage
+
+`.borrow()` - Gets a reference to the resource in the storage without loading it or taking it out from the storage
+
+4. Explain why we couldn't save something to our account storage inside of a script.
+
+Script are for read-only access to an account and it's data. Hence, it cannot be used to save something to the account storage.
+
+5. Explain why I couldn't save something to your account.
+
+Saving to an account needs the special `AuthAccount`. The `AuthAccount` signs for the transaction and my account will allow transactions that I have signed. Hence, you cannot save to my account.
+
+6. Define a contract that returns a resource that has at least 1 field in it. Then, write 2 transactions:
+
+A transaction that first saves the resource to account storage, then loads it out of account storage, logs a field inside the resource, and destroys it.
+
+A transaction that first saves the resource to account storage, then borrows a reference to it, and logs a field inside the resource.
