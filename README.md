@@ -421,4 +421,46 @@ Saving to an account needs the special `AuthAccount`. The `AuthAccount` signs fo
 
 A transaction that first saves the resource to account storage, then loads it out of account storage, logs a field inside the resource, and destroys it.
 
+```
+import BoxOfChocolates from 0x05
+
+transaction() {
+
+  prepare(signer: AuthAccount) {
+    let chocolate <- BoxOfChocolates.createAChocolate()
+    log("chocolate created")
+    log(chocolate.name)
+    signer.save(<- chocolate, to: /storage/Chocolates)
+    log("chocolate saved to storage")
+
+    let existingChocolate <- signer.load<@BoxOfChocolates.Chocolate>(from: /storage/Chocolates) ?? panic("chocolate not found in storage!")
+    log("chocolate loaded from storage")
+    log(existingChocolate.name)
+
+    destroy existingChocolate
+  }
+}
+```
+
 A transaction that first saves the resource to account storage, then borrows a reference to it, and logs a field inside the resource.
+
+```
+import BoxOfChocolates from 0x05
+
+transaction() {
+
+  prepare(signer: AuthAccount) {
+    let chocolate <- BoxOfChocolates.createAChocolate()
+    log("chocolate created")
+    log(chocolate.name)
+    signer.save(<- chocolate, to: /storage/Chocolates)
+    log("chocolate saved to storage")
+
+    let existingChocolateRef = signer.borrow<&BoxOfChocolates.Chocolate>(from: /storage/Chocolates)
+                          ?? panic("chocolate not found in storage")
+    log("chocolate reference borrowed from storage")
+    log(existingChocolateRef.name)
+  }
+
+}
+```
