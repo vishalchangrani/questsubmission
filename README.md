@@ -421,6 +421,24 @@ Saving to an account needs the special `AuthAccount`. The `AuthAccount` signs fo
 
 A transaction that first saves the resource to account storage, then loads it out of account storage, logs a field inside the resource, and destroys it.
 
+Contract
+
+```
+pub contract BoxOfChocolates {
+
+  pub resource Chocolate {
+    pub var name: String
+    init() {
+      self.name = "M&Ms"
+    }
+  }
+
+  pub fun createAChocolate(): @Chocolate {
+    return <- create Chocolate()
+  }
+}
+```
+
 ```
 import BoxOfChocolates from 0x05
 
